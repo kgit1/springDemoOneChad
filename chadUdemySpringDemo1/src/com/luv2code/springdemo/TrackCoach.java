@@ -1,0 +1,23 @@
+package com.luv2code.springdemo;
+
+public class TrackCoach implements Coach {
+	private FortuneService fortuneService;
+	private FortuneService fortuneService2;
+
+	public TrackCoach(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
+
+	public void setFortuneService2(FortuneService fortuneService2) {
+		this.fortuneService2 = fortuneService2;
+	}
+
+	public String getDailyWorkout() {
+		return "Run a hard 5k";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		return getClass().getSimpleName() + "\n" + fortuneService.getFortune() + "\n" + fortuneService2.getFortune();
+	}
+}
