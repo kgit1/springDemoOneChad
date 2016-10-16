@@ -6,6 +6,8 @@ public class FootballCoach implements Coach {
 	private String name;
 	private String emailAddress;
 	private String team;
+	private String age;
+	private String address;
 
 	public FootballCoach() {
 		System.out.println("FootballCoach: inside non-arg constructor");
@@ -33,6 +35,14 @@ public class FootballCoach implements Coach {
 		this.team = team;
 	}
 
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	@Override
 	public String getDailyWorkout() {
 		return getClass().getSimpleName() + ": practice penalty";
@@ -40,12 +50,12 @@ public class FootballCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		return getClass().getSimpleName() +"\n"
-				+ fortuneService.getFortune() + "\n"
-				+ fortuneService2.getFortune() 
-				+ ",\nname: " + name
-				+ "\nemail: "	+ emailAddress
-				+ ",\nteam: " + team;
+		return getClass().getSimpleName() + "\n" + fortuneService.getFortune()
+				+ "\n" + fortuneService2.getFortune()
+				+ ",\nname: " + name + "\nemail: " 
+				+ emailAddress + ",\nteam: " + team 
+				+ ",\nage: " + age
+				+ ",\naddress: " + address;
 	}
 
 }

@@ -7,6 +7,7 @@ public class BaseballCoach implements Coach {
 	private String team;
 
 	public BaseballCoach(FortuneService fortuneService) {
+		System.out.println("Inside BaseballCoach arg-constructor");
 		this.fortuneService = fortuneService;
 	}
 
